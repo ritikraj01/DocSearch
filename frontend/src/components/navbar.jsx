@@ -14,7 +14,7 @@ const Navbar = () => {
   
     const logoutPage = async () => {
       try {
-        const response = await axios.get(`${BACKEND_URL}/user/logout`);
+        const response = await axios.get(`https://docsearch-1.onrender.com/user/logout`);
         console.log('Success:', response.data);
         logout();
         navigate("/login"); 

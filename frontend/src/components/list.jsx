@@ -14,7 +14,7 @@ const List = () => {
   const [searchQuery, setSearchQuery] = useState(""); // Search Query
 
   useEffect(() => {
-    axios.get(`${BACKEND_URL}/listing`)
+    axios.get(`https://docsearch-1.onrender.com/listing`)
       .then((response) => {
         console.log("API Response:", response.data.data);
         if (Array.isArray(response.data.data)) {

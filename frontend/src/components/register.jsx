@@ -16,7 +16,7 @@ const RegisterAuthPage = () => {
     try {
         console.log(data);
         console.log(BACKEND_URL);
-        const response = await axios.post(`${BACKEND_URL}/user/signup`, data);
+        const response = await axios.post(`https://docsearch-1.onrender.com/user/signup`, data);
         console.log('Success:', response.data);
         navigate("/login"); 
     } catch (error) {
