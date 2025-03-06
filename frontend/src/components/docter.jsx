@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { BACKEND_URL } from "../config";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const DoctorProfile = () => {
     const navigate = useNavigate();
-    const { userId , id } = useParams();
+    const { userId } = useContext(AuthContext);
+    const {id } = useParams();
     const [doctor, setDoctor] = useState(null);
     const [slots, setSlots] = useState([]);
     const [selectedSlot, setSelectedSlot] = useState(null);

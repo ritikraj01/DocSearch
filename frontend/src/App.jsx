@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/login" element={<LoginAuthPage />} />
         <Route path="/signup" element={<RegisterAuthPage />} />
         <Route path="/:userId/search" element={<List />} />
-        <Route path="/:userId/search/:id" element={<DoctorProfile />} />
+        <Route path="/search/:id" element={<DoctorProfile />} />
         <Route path="/:userId/appointments" element={<AppointmentsList />} />
       </Routes>
     </Router>

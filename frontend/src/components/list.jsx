@@ -122,7 +122,7 @@ const List = () => {
           filteredDoctors.map((doctor) => (
             <div key={doctor._id} className="card-outer">
               <a
-                href={`/${userId}/search/${doctor._id}`}
+                href={`/search/${doctor._id}`}
                 className="block rounded-lg shadow-lg hover:shadow-xl transition duration-300"
               >
                 <div className="bg-white rounded-lg overflow-hidden">

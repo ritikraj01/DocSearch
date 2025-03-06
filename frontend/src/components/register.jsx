@@ -15,6 +15,7 @@ const RegisterAuthPage = () => {
   const onSubmit = async (data) => {
     try {
         console.log(data);
+        console.log(BACKEND_URL);
         const response = await axios.post(`${BACKEND_URL}/user/signup`, data);
         console.log('Success:', response.data);
         navigate("/login"); 
