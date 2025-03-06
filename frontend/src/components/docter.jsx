@@ -14,7 +14,7 @@ const DoctorProfile = () => {
     const [selectedSlot, setSelectedSlot] = useState(null);
 
     useEffect(() => {
-        axios.get(`https://docsearch-1.onrender.com/listing/${id}/slots`)
+        axios.get(`${BACKEND_URL}/listing/${id}/slots`)
             .then(res => {
                 //console.log(res.data.data);
                 setDoctor(res.data.data);

@@ -12,7 +12,7 @@ const LoginAuthPage = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post(`https://docsearch-1.onrender.com/user/login`, data);
+      const response = await axios.post(`${ BACKEND_URL }/user/login`, data);
       login(response.data.userId); 
       navigate(`/${response.data.userId}/search`);
     } catch (error) {

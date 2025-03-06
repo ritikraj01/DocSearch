@@ -12,7 +12,7 @@ const AppointmentsList = () => {
     useEffect(() => {
         const fetchAppointments = async () => {
             try {
-                const response = await axios.get(`https://docsearch-1.onrender.com/book/${userId}/appointments`);
+                const response = await axios.get(`${ BACKEND_URL }/book/${userId}/appointments`);
                 setAppointments(response.data);
             } catch (err) {
                 setError("Failed to fetch appointments.");

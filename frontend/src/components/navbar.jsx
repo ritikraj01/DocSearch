@@ -14,7 +14,7 @@ const Navbar = () => {
   
     const logoutPage = async () => {
       try {
-        const response = await axios.get(`https://docsearch-1.onrender.com/user/logout`);
+        const response = await axios.get(`${ BACKEND_URL }/user/logout`);
         console.log('Success:', response.data);
         logout();
         navigate("/login"); 
@@ -32,7 +32,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
           <li><Link to="/" className="hover:text-gray-200">Home</Link></li>
-          <li><Link to={userId ? `/${userId}/search` : "/login"} className="hover:text-gray-200">Search Doctors</Link></li>
+          <li><Link to={userId ? `/search` : "/login"} className="hover:text-gray-200">Search Doctors</Link></li>
           <li><Link to={userId ? `/${userId}/appointments` : "/login"} className="hover:text-gray-200">Appointments</Link></li>
           {userId ? 
           <li>   
@@ -60,8 +60,8 @@ const Navbar = () => {
       {menuOpen && (
         <ul className="md:hidden mt-4 bg-blue-700 p-4 space-y-3 text-center">
           <li><Link to="/" className="block py-2 hover:text-gray-200">Home</Link></li>
-          <li><Link to={userId ? `/${userId}/search` : "/search"} className="hover:text-gray-200">Search Doctors</Link></li>
-          <li><Link to={userId ? `/${userId}/appointments` : "/appointments"} className="hover:text-gray-200">Appointments</Link></li>
+          <li><Link to={userId ? `/search` : "/login"} className="hover:text-gray-200">Search Doctors</Link></li>
+          <li><Link to={userId ? `/${userId}/appointments` : "/login"} className="hover:text-gray-200">Appointments</Link></li>
           <li><Link to="/contact" className="block py-2 hover:text-gray-200">Contact</Link></li>
           {userId ? 
           <li>   

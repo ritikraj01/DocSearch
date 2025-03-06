@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BACKEND_URL } from '../config';
-import { useParams } from "react-router-dom";
+
 
 const List = () => {
-  const { userId } = useParams();
+  
   const [doctors, setDoctors] = useState([]); // All doctors
   const [filteredDoctors, setFilteredDoctors] = useState([]); // Filtered doctors
   const [loading, setLoading] = useState(true);
@@ -14,7 +14,7 @@ const List = () => {
   const [searchQuery, setSearchQuery] = useState(""); // Search Query
 
   useEffect(() => {
-    axios.get(`https://docsearch-1.onrender.com/listing`)
+    axios.get(`${ BACKEND_URL }/listing`)
       .then((response) => {
         console.log("API Response:", response.data.data);
         if (Array.isArray(response.data.data)) {
