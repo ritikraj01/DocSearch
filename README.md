@@ -80,6 +80,10 @@ cd frontend
 npm start
 ```
 
+## 🌐 Deployment
+
+🔗 **Live Link:** [DocSearch Deployed App](https://doc-search-cuiz.vercel.app/)
+
 ## 📌 API Endpoints
 
 | Method | Route                         | Description                   |
@@ -89,7 +93,7 @@ npm start
 | GET    | `/listing`                    | Get list of available doctors |
 | GET    | `/listing/:id/slots`          | Get doctor profile details    |
 | POST   | `/book`                       | Book an appointment           |
-| PATCH  | `/BOOK/cancel/:appointmentId` | Cancel an appointment         |
+| PATCH  | `/book/cancel/:appointmentId` | Cancel an appointment         |
 
 ## 🛠️ Future Enhancements
 
